@@ -1,6 +1,6 @@
 module.exports = {
   type: 'postgres',
-  url: process.env.DATABASE_URL,
+  url: `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@localhost:5432/${process.env.POSTGRES_DB}`,
   entities: [
     process.env.NODE_ENV === 'test'
       ? 'src/**/*.entity.ts'

@@ -8,6 +8,10 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { HealthController } from './health.controller';
 import { FeatureModule } from './feature/feature.module';
+import { StepModule } from './step/step.module';
+import { ScenarioModule } from './scenario/scenario.module';
+import { StepUsageModule } from './step-usage/step-usage.module';
+import { ProjectModule } from './project/project.module';
 
 @Module({
   imports: [
@@ -16,6 +20,10 @@ import { FeatureModule } from './feature/feature.module';
     UserModule,
     AuthModule,
     FeatureModule,
+    StepModule,
+    ScenarioModule,
+    StepUsageModule,
+    ProjectModule,
   ],
   controllers: [AppController, HealthController],
   providers: [AppService],
